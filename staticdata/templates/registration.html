@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        h1{
+            text-align: center;
+            color: red;
+        }
+        table, tr, td{
+            align-items: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body >
+    <h1><b><u>SIGN UP</u></b></h1>
+    <div>
+    <form action="" method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td><label >Enter User name:</label></td>
+            <td><input type="text" name="username" placeholder="User name"></td>
+        </tr>
+        <tr>
+            <td><label >Enter first name:</label></td>
+            <td><input type="text" name="fname" placeholder="first name"></td>
+        </tr>
+        <tr>
+            <td><label >Enter last name:</label></td>
+            <td><input type="text" name="lname" placeholder="last name"></td>
+        </tr>
+        <tr>
+            <td><label >Enter Email Address:</label></td>
+            <td><input type="email" name="email" placeholder="Email Address" ></td>
+        </tr>
+      
+        <tr>
+            <td><label>Password:</label></td>
+            <td><input type="password" name="password" placeholder="password"></td>
+            
+        </tr>
+        <tr>
+            <td><label>Conform Password:</label></td>
+            <td><input type="password" name="cpassword" placeholder="conform password"></td>
+            
+        </tr>
+        <tr></tr>
+        <tr>
+           <td> <input type="checkbox" name="check"> Ensure the data is accurate</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Sign up"></td>
+        </tr>
+
+
+
+</form>
+
+</div>
+</table><h1>
+{% for i in messages %}
+{{i}}
+{% endfor %}
+</h1>
+
+</body>
+</html>
