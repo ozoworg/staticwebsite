@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'staticdata.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'staticdata2',
+        'NAME': 'staticpage',
         'USER' : 'root',
         'PASSWORD' : '',
     }
